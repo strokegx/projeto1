@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Número da Sorte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Descubra seu Número da Sorte</h1>
+    <p>Clique no botão e veja qual é o seu número da sorte de hoje.</p>
+
+    <div id="numero">?</div>
+
+    <button onclick="gerarNumero()">Gerar Número</button>
+  </div>
+
+  <script>
+    function gerarNumero() {
+      let numeroSorte = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("numero").textContent = numeroSorte;
+    }
+  </script>
+</body>
+</html>
