@@ -1,37 +1,22 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+body{
+height:100vh;
+font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
 }
 
-.container {
-  text-align: center;
-  background: #222;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  background: #ff3c3c;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #cc2f2f;
-}
-
-#numero {
-  font-size: 40px;
-  margin: 20px 0;
+.container{
+width:420px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
+border:1px solid rgba(59,130,246,0.2);
+box-shadow:
+0 0 40px rgba(59,130,246,0.15),
+0 10px 40px rgba(0,0,0,0.6);
 }
