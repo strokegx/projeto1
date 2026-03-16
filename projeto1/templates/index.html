@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Número da Sorte</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Número da Sorte</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
+  <div class="container">
+    <h1>Descubra o seu número!</h1>
+    <p>Clique no botão para descobrir seu número!!</p>
 
-<div class="container">
+    {% if numero %}
+    <div id="numero">
+      {{ numero }}
+      <h6>Wow... QUE NÚMERO MAGNÍFICO!!</h6>
+    </div>
+    {% endif %}
 
-<h1>Descubra o seu número!</h1>
-
-<p>Clique no botão para descobrir seu número!!</p>
-
-{% if numero %}
-<div id="numero">
-{{ numero }}
-<h6>Wow... QUE NUMERO MAGNÍFICO!!</h6>
-</div>
-{% endif %}
-
-<form method="post">
-<button type="submit">Gerar outro número magnífico</button>
-</form>
-
-</div>
-
+    <form method="post">
+      <button type="submit">Gerar outro número magnífico</button>
+    </form>
+  </div>
 </body>
 </html>
