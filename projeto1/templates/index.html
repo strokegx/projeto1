@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Número da Sorte</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Descubra o seu número LEGENDÁRIOOOOO</h1>
+
+<p>Clique no botão para descobrir seu número lendário.</p>
+
+{% if numero %}
+<div id="numero">
+{{ numero }}
+<h6>Wow... QUE NUMERO LEGENDÁRIO!!</h6>
+</div>
+{% endif %}
+
+<form method="post">
+<button type="submit">Gerar número lendário</button>
+</form>
+
+</div>
+
+</body>
+</html>
