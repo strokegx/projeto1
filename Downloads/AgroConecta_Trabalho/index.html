@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroConecta — Conectando Produção e Consumo Inteligente</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Agro<span>Conecta</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="mostrarPagina('home')" class="active" id="nav-home">Início</a></li>
+    <li><a href="#" onclick="mostrarPagina('simulator')" id="nav-simulator">Simulador</a></li>
+    <li><a href="#" onclick="mostrarPagina('dashboard')" id="nav-dashboard">Dashboard</a></li>
+    <li><a href="#" onclick="mostrarPagina('contact')" id="nav-contact">Contato</a></li>
+  </ul>
+  <a href="#" class="nav-cta" onclick="mostrarPagina('contact'); return false;">Começar Agora</a>
+  <button class="hamburger" id="hamburger" onclick="alternarMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ PAGE: HOME ============ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-tag">🌱 Agrotech · B2B · Sustentabilidade</div>
+    <h1>Conectando <span class="accent">Campo</span><br>às Cidades</h1>
+    <p>A solução Agrotech focada em eliminar o desperdício e garantir segurança alimentar através de redes de assinatura B2B.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary" onclick="mostrarPagina('simulator'); return false;">Ver Simulação</a>
+      <a href="#" class="btn-outline" onclick="mostrarPagina('dashboard'); return false;">Acessar Dashboard</a>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-num" id="s1">0%</div>
+      <div class="stat-label">Redução de Desperdício</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="s2">0%</div>
+      <div class="stat-label">Aumento de Renda</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="s3">0%</div>
+      <div class="stat-label">Nível de Serviço</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="s4">0+</div>
+      <div class="stat-label">Produtores Parceiros</div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-tag">O Problema</div>
+    <h2 class="section-title">Por que a cadeia alimentar atual está quebrada?</h2>
+    <p class="section-sub">3.2% dos domicílios brasileiros ainda enfrentam insegurança alimentar grave (IBGE 2024), enquanto produtores perdem safras inteiras por falta de escoamento.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🚜</div>
+        <h3>O Pequeno Produtor</h3>
+        <p>Sofre com o desperdício de excedentes e falta de previsibilidade financeira para planejar safras. Perde até 50% da produção sem mercado garantido.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🍽️</div>
+        <h3>O Comércio Local</h3>
+        <p>Enfrenta fornecedores instáveis, variação de preços e falta de rastreabilidade na qualidade. Impossível construir um cardápio orgânico consistente.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🌍</div>
+        <h3>O Impacto Ambiental</h3>
+        <p>Cadeias com muitos intermediários geram emissões desnecessárias. A falta de planejamento leva ao desperdício de recursos naturais e financeiros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-tag">A Solução</div>
+    <h2 class="section-title">Ecossistema AgroConecta</h2>
+    <p class="section-sub">Distribuição inteligente baseada em recorrência. Quatro pilares que transformam a cadeia de valor do campo à cidade.</p>
+    <div class="flow-grid">
+      <div class="flow-card">
+        <div class="flow-num">01</div>
+        <h3>Assinatura B2B</h3>
+        <p>Restaurantes assinam volumes semanais garantindo demanda constante para os produtores.</p>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">02</div>
+        <h3>Inteligência</h3>
+        <p>Nossa IA consolida pedidos e divide entre produtores locais por capacidade disponível.</p>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">03</div>
+        <h3>Logística</h3>
+        <p>Rotas otimizadas reduzem o custo de frete e o tempo de prateleira dos produtos.</p>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">04</div>
+        <h3>Monitoramento</h3>
+        <p>Dashboard de performance para gestão técnica e financeira total em tempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-banner">
+      <h2>Transformando o Campo,<br>Alimentando Cidades.</h2>
+      <p>Junte-se à rede que já conecta produtores e restaurantes em todo o Brasil.</p>
+      <a href="#" class="btn-primary" onclick="mostrarPagina('contact'); return false;">Vamos conectar o futuro do agronegócio?</a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PAGE: SIMULATOR ============ -->
+<div class="page" id="page-simulator">
+  <div style="padding: 2.5rem 2rem 0; max-width:1100px; margin:0 auto;">
+    <div class="section-tag">Simulador Interativo</div>
+    <h1 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.5rem;">Calcule seu <span style="color:var(--pink)">Impacto</span></h1>
+    <p style="color:var(--muted);margin-bottom:2rem;">Simule o ganho financeiro e redução de desperdício ao entrar na rede AgroConecta.</p>
+  </div>
+
+  <div class="sim-layout">
+    <!-- Form -->
+    <div class="sim-panel">
+      <h2>Dados do <span class="accent">Produtor</span></h2>
+      <label>Tipo de Cultura</label>
+      <select class="sim-select" id="cultura">
+        <option value="hortalica">Hortaliças</option>
+        <option value="fruta">Frutas</option>
+        <option value="graos">Grãos</option>
+        <option value="laticinios">Laticínios</option>
+      </select>
+      <label>Produção Semanal (kg)</label>
+      <input type="number" class="sim-input" id="producao" placeholder="Ex: 500" value="500">
+      <label>Desperdício Atual (%)</label>
+      <input type="range" class="sim-input" id="desperdicio" min="10" max="60" value="40" oninput="document.getElementById('despLabel').textContent=this.value+'%'">
+      <span id="despLabel" style="color:var(--pink);font-weight:700;font-size:1.1rem;">40%</span>
+      <br><br>
+      <label>Preço Médio de Venda (R$/kg)</label>
+      <input type="number" class="sim-input" id="preco" placeholder="Ex: 4.50" value="4.50" step="0.10">
+      <label>Distância ao Centro de Distribuição (km)</label>
+      <select class="sim-select" id="distancia">
+        <option value="curta">Até 50 km</option>
+        <option value="media">50–150 km</option>
+        <option value="longa">150+ km</option>
+      </select>
+      <button class="sim-btn" onclick="calcularImpacto()">🌱 Calcular Impacto</button>
+
+      <div class="result-panel" id="resultPanel">
+        <div class="result-card">
+          <h3>📊 Seu Resultado com AgroConecta</h3>
+          <div class="result-row"><span class="label">Redução de desperdício</span><span class="value good" id="r1">—</span></div>
+          <div class="result-row"><span class="label">Kg salvos por semana</span><span class="value good" id="r2">—</span></div>
+          <div class="result-row"><span class="label">Ganho financeiro/mês</span><span class="value good" id="r3">—</span></div>
+          <div class="result-row"><span class="label">Custo de frete estimado</span><span class="value" id="r4">—</span></div>
+          <div class="result-row"><span class="label">Nível de serviço esperado</span><span class="value good">98%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="sim-panel">
+      <h2>Mapa de <span class="accent">Rotas</span></h2>
+      <div class="map-sim">
+        <svg class="map-svg" viewBox="0 0 400 280" id="mapSvg">
+          <!-- Background -->
+          <rect width="400" height="280" fill="#0f1322"/>
+          <!-- Grid lines -->
+          <line x1="0" y1="70" x2="400" y2="70" stroke="#1e2438" stroke-width="1"/>
+          <line x1="0" y1="140" x2="400" y2="140" stroke="#1e2438" stroke-width="1"/>
+          <line x1="0" y1="210" x2="400" y2="210" stroke="#1e2438" stroke-width="1"/>
+          <line x1="100" y1="0" x2="100" y2="280" stroke="#1e2438" stroke-width="1"/>
+          <line x1="200" y1="0" x2="200" y2="280" stroke="#1e2438" stroke-width="1"/>
+          <line x1="300" y1="0" x2="300" y2="280" stroke="#1e2438" stroke-width="1"/>
+          <!-- Roads -->
+          <path d="M40 240 Q120 180 200 140 Q280 100 360 60" stroke="#2a3356" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path d="M80 260 L80 20" stroke="#2a3356" stroke-width="5" fill="none"/>
+          <path d="M0 130 L400 130" stroke="#2a3356" stroke-width="5" fill="none"/>
+          <!-- Optimized route -->
+          <path id="routePath" d="M70 220 Q140 170 210 140 Q280 110 340 80" stroke="#ff2d7e" stroke-width="3" fill="none" stroke-dasharray="8,4" stroke-linecap="round" opacity="0">
+            <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1" dur=".5s" fill="freeze" begin="0.1s"/>
+          </path>
+          <!-- Nodes: Producers -->
+          <circle cx="70" cy="220" r="10" fill="#ff2d7e"/>
+          <text x="70" y="240" text-anchor="middle" fill="#ff2d7e" font-size="9" font-family="DM Sans">Produtor A</text>
+          <circle cx="120" cy="195" r="8" fill="#ff2d7e" opacity=".7"/>
+          <text x="120" y="212" text-anchor="middle" fill="#ff2d7e" font-size="9" font-family="DM Sans">Produtor B</text>
+          <circle cx="170" cy="170" r="8" fill="#ff2d7e" opacity=".7"/>
+          <text x="170" y="187" text-anchor="middle" fill="#ff2d7e" font-size="9" font-family="DM Sans">Produtor C</text>
+          <!-- Hub -->
+          <rect x="195" y="122" width="30" height="30" rx="6" fill="#7c3aed"/>
+          <text x="210" y="162" text-anchor="middle" fill="#a78bfa" font-size="9" font-family="DM Sans">Hub</text>
+          <!-- Destinations -->
+          <rect x="288" y="85" width="28" height="22" rx="5" fill="#1e2438" stroke="#4ade80" stroke-width="1.5"/>
+          <text x="302" y="116" text-anchor="middle" fill="#4ade80" font-size="8" font-family="DM Sans">Rest. 1</text>
+          <rect x="325" y="60" width="28" height="22" rx="5" fill="#1e2438" stroke="#4ade80" stroke-width="1.5"/>
+          <text x="339" y="92" text-anchor="middle" fill="#4ade80" font-size="8" font-family="DM Sans">Rest. 2</text>
+          <!-- Distance labels -->
+          <text x="200" y="20" text-anchor="middle" fill="#6b7a9e" font-size="10" font-family="Syne">Rota Otimizada AgroConecta</text>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ff2d7e"></div>Produtores</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#7c3aed"></div>Hub Central</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div>Restaurantes</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff2d7e;opacity:.5;width:20px;height:3px;border-radius:2px"></div>Rota Ativa</div>
+      </div>
+      <div class="route-info">
+        <p>A IA AgroConecta consolida pedidos de múltiplos restaurantes e traça a <strong>rota mínima entre produtores e hubs</strong>, reduzindo emissões e custo logístico em até <strong>35%</strong>.</p>
+      </div>
+
+      <div style="margin-top:1.5rem;">
+        <h2 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:1rem;">Simular <span style="color:var(--pink)">Pedido</span></h2>
+        <label>Restaurante</label>
+        <select class="sim-select" id="restaurante">
+          <option>Restaurante Orgânico SP</option>
+          <option>Bistrô Verde</option>
+          <option>Cozinha Natural</option>
+        </select>
+        <label>Produto Desejado</label>
+        <select class="sim-select" id="produto">
+          <option>Alface Crespa (10 kg/sem)</option>
+          <option>Tomate Orgânico (15 kg/sem)</option>
+          <option>Mix de Folhas (8 kg/sem)</option>
+          <option>Abóbora Japonesa (20 kg/sem)</option>
+        </select>
+        <button class="sim-btn" onclick="simularPedido()" style="margin-top:.5rem;">📦 Simular Entrega</button>
+        <div id="pedidoResult" style="display:none;margin-top:1rem;padding:1rem;background:var(--bg);border-radius:10px;border:1px solid var(--border);font-size:.88rem;color:var(--muted);line-height:1.7;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE: DASHBOARD ============ -->
+<div class="page" id="page-dashboard">
+  <div class="dash-header">
+    <div>
+      <h1>Dashboard <span>Executivo</span></h1>
+      <p style="color:var(--muted);font-size:.88rem;margin-top:.3rem;">Semana 23 · Jun 2026</p>
+    </div>
+    <div class="status-badge"><div class="status-dot"></div>Sistema Ativo</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Pedidos Ativos</div>
+      <div class="kpi-value pink" id="kpi1">0</div>
+      <div class="kpi-delta up">▲ +12% vs semana anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Kg Entregues</div>
+      <div class="kpi-value" id="kpi2">0</div>
+      <div class="kpi-delta up">▲ +8% vs semana anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Desperdício Evitado</div>
+      <div class="kpi-value green" id="kpi3">0 kg</div>
+      <div class="kpi-delta up">▲ Meta atingida</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Receita Semanal</div>
+      <div class="kpi-value" id="kpi4">R$ 0</div>
+      <div class="kpi-delta up">▲ +5% vs semana anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Nível de Serviço</div>
+      <div class="kpi-value green">98%</div>
+      <div class="kpi-delta up">▲ Meta: 95%</div>
+    </div>
+  </div>
+
+  <div class="dash-grid">
+    <div>
+      <!-- Chart -->
+      <div class="dash-card" style="margin-bottom:1.5rem;">
+        <h3>Entregas por Semana <span>(últimas 6 semanas)</span></h3>
+        <div class="bar-chart" id="barChart"></div>
+      </div>
+      <!-- Orders -->
+      <div class="dash-card">
+        <h3>Pedidos Recentes</h3>
+        <table class="orders-table">
+          <thead>
+            <tr><th>Restaurante</th><th>Produto</th><th>Qty</th><th>Status</th></tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Producers -->
+    <div>
+      <div class="dash-card">
+        <h3>Produtores <span>Conectados</span></h3>
+        <div class="producer-list" id="producerList"></div>
+      </div>
+      <div class="dash-card" style="margin-top:1.5rem;">
+        <h3>Impacto <span>Ambiental</span></h3>
+        <div style="display:flex;flex-direction:column;gap:.8rem;margin-top:.5rem;">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:.4rem;font-size:.85rem;">
+              <span style="color:var(--muted)">CO₂ Evitado</span><span style="color:#4ade80;font-weight:700">1.2t</span>
+            </div>
+            <div style="background:var(--bg);border-radius:50px;height:6px;overflow:hidden;">
+              <div style="width:72%;height:100%;background:linear-gradient(90deg,#4ade80,#16a34a);border-radius:50px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:.4rem;font-size:.85rem;">
+              <span style="color:var(--muted)">Água Poupada</span><span style="color:#38bdf8;font-weight:700">840L</span>
+            </div>
+            <div style="background:var(--bg);border-radius:50px;height:6px;overflow:hidden;">
+              <div style="width:55%;height:100%;background:linear-gradient(90deg,#38bdf8,#0284c7);border-radius:50px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:.4rem;font-size:.85rem;">
+              <span style="color:var(--muted)">Alimentos Redistribuídos</span><span style="color:var(--pink);font-weight:700">320kg</span>
+            </div>
+            <div style="background:var(--bg);border-radius:50px;height:6px;overflow:hidden;">
+              <div style="width:85%;height:100%;background:linear-gradient(90deg,var(--pink),var(--pink-dim));border-radius:50px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE: CONTACT ============ -->
+<div class="page" id="page-contact">
+  <div class="contact-wrap">
+    <div class="section-tag">Vamos Conectar?</div>
+    <h2>Entre na <span style="color:var(--pink)">Rede</span></h2>
+    <p>Seja você produtor rural ou dono de restaurante, o AgroConecta tem um plano para transformar seu negócio.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
+      <div class="problem-card" style="cursor:pointer;" onclick="selecionarTipo('produtor',this)" id="card-produtor">
+        <div class="problem-icon">🚜</div>
+        <h3>Sou Produtor</h3>
+        <p>Quero garantir demanda constante e previsibilidade financeira para minha safra.</p>
+      </div>
+      <div class="problem-card" style="cursor:pointer;" onclick="selecionarTipo('restaurante',this)" id="card-restaurante">
+        <div class="problem-icon">🍽️</div>
+        <h3>Sou Restaurante</h3>
+        <p>Quero fornecedores confiáveis, preços estáveis e rastreabilidade total.</p>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nome Completo</label>
+        <input type="text" class="sim-input" id="f-nome" placeholder="João da Silva">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="sim-input" id="f-email" placeholder="joao@exemplo.com">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Telefone / WhatsApp</label>
+        <input type="tel" class="sim-input" id="f-tel" placeholder="(11) 99999-9999">
+      </div>
+      <div class="form-group">
+        <label>Cidade / Estado</label>
+        <input type="text" class="sim-input" id="f-cidade" placeholder="São Paulo, SP">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Mensagem</label>
+      <textarea class="sim-input" id="f-msg" placeholder="Conta um pouco sobre seu negócio..."></textarea>
+    </div>
+    <button class="sim-btn" onclick="enviarContato()">🌱 Enviar e Conectar</button>
+
+    <div id="formSuccess" style="display:none;margin-top:1.5rem;padding:1.5rem;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.3);border-radius:12px;text-align:center;">
+      <div style="font-size:2rem;margin-bottom:.8rem;">✅</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.4rem;">Mensagem enviada!</div>
+      <div style="color:var(--muted);font-size:.9rem;">Nossa equipe entrará em contato em até 24h. Bem-vindo à rede AgroConecta!</div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <div class="toast-icon" id="toastIcon">🌱</div>
+  <div>
+    <div class="toast-title" id="toastTitle">Notificação</div>
+    <div class="toast-body" id="toastBody">Mensagem aqui</div>
+  </div>
+  <button class="toast-close" onclick="fecharNotificacao()">✕</button>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
