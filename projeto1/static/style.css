@@ -1,0 +1,22 @@
+body{
+height:100vh;
+font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.container{
+width:420px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
+border:1px solid rgba(59,130,246,0.2);
+box-shadow:
+0 0 40px rgba(59,130,246,0.15),
+0 10px 40px rgba(0,0,0,0.6);
+}
